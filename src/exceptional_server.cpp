@@ -47,7 +47,7 @@ int main() {
 		{
 			if (A > LLONG_MAX || B > LLONG_MAX)
 			{
-				throw -1;
+				throw 1;
 			}
 			if (Server::compute(A, B) > LLONG_MAX);
 			{
