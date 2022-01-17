@@ -49,7 +49,7 @@ public:
 };
 int Server::load = 0;
 
-int main() {
+int no_main() {
 	int T; cin >> T;
 	while(T--) {
 		//long long A, B;
