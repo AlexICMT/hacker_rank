@@ -58,7 +58,7 @@ public:
 // work place end
 
 
-int no_main(){
+int no_main_3(){
 
     int n, val;
     cin>>n; //The number of objects that is going to be created.
