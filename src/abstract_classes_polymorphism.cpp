@@ -37,20 +37,8 @@ class Cache{
    virtual void print_map(std::string_view, const std::map<int, Node*>&) = 0;
    public:
    map<int,Node*>* p_mp = &mp;
+   virtual ~Cache() {}
 };
-
-// The work place begins
-/*
-template<typename K, typename V>
-map<V, K> inverse_map(map<K, V> &m)
-{
-    map<V, K> inv;
-    for_each(m.begin(), m.end(), [&inv] (const pair<K, V> &p) { inv.insert(make_pair(p.second, p.first)); });
-    return inv;
-}
-*/
-
-
 
 class LRUCache: public Cache
 {
@@ -59,12 +47,13 @@ map<int, Node*>::iterator it, it_2;
 vector <map<int, Node*>::iterator> it_3;
 public:
 	LRUCache(int cap) {cp = cap;}
+	virtual ~LRUCache() {}
 	virtual void set(int key, int value)
 	{
+		ptr = new Node(key, value);
 		auto search = mp.find(key);
 		if ((search == mp.end()) && (static_cast<int>(mp.size()) < cp))
 		{
-			ptr = new Node(key, value);
 			it = mp.insert(make_pair(key, ptr)).first;
 			it_3.push_back(it);
 		}
@@ -81,11 +70,16 @@ public:
 			}
 			else
 			{
-				for (int i = 0; 9 < cp; i++)
+				for (int i = 0; i < cp; i++)
 					if(it_3[i] == search)
-						;
+					{
+						mp.erase(it_3[i]);
+						for(int j = i; j < cp; j++)
+							if(i != (cp - 1))
+								it_3[j] = it_3[j+1];
+						it_3[cp - 1] = mp.insert(make_pair(key, ptr)).first;
+					}
 			}
-
 		}
 	}
 	virtual int get(int key)

@@ -22,6 +22,10 @@ protected:
 	uint16_t p_age;
 	string p_name;
 public:
+	virtual ~Person()
+	{
+
+	}
 	//static uint16_t cur_id[2]{};
 	virtual void getdata() = 0;
 	virtual void putdata() = 0;
@@ -34,6 +38,10 @@ private:
 	uint16_t cur_id;
 public:
 	Professor() {++e_cur_id[0]; cur_id = e_cur_id[0];}
+	virtual ~Professor()
+	{
+
+	}
 	virtual void getdata() {
 		cin >> p_name >> p_age >> publications; }
 	virtual void putdata() {
@@ -49,6 +57,10 @@ private:
 	uint16_t sum() {for (int i:marks) _sum += i; return _sum;}
 public:
 	Student() {++e_cur_id[1]; cur_id = e_cur_id[1];}
+	virtual ~Student()
+	{
+
+	}
 	virtual void getdata() {
 	cin >> p_name >> p_age >> marks[0] >> marks[1] >> marks[2] >> marks[3] >> marks[4] >> marks[5]; }
 	virtual void putdata() {
