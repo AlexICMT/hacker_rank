@@ -108,7 +108,7 @@ public:
 
 // The work place ends
 
-int main() {
+int no_main_4() {
    int n, capacity,i;
    cin >> n >> capacity;
    LRUCache l(capacity);

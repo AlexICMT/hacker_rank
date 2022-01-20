@@ -52,6 +52,12 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.903559566.1315846932" name="magic_spells.cpp" rcbsApplicability="disable" resourcePath="src/magic_spells.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1265305721.434017191">
+						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1265305721.434017191" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1265305721"/>
+					</fileInfo>
+					<sourceEntries>
+						<entry excluding="src/magic_spells.cpp|src/inherited_code.cpp|src/virtual_functions.cpp|src/exceptional_server.cpp|src/abstract_classes_polymorphism.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -98,6 +104,12 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.release.540302619.1568307182" name="magic_spells.cpp" rcbsApplicability="disable" resourcePath="src/magic_spells.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1061746926.2109694365">
+						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1061746926.2109694365" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1061746926"/>
+					</fileInfo>
+					<sourceEntries>
+						<entry excluding="src/magic_spells.cpp|src/inherited_code.cpp|src/virtual_functions.cpp|src/exceptional_server.cpp|src/abstract_classes_polymorphism.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
@@ -122,6 +134,13 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/hacker_rank"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/hacker_rank"/>
+		</configuration>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
