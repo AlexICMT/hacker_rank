@@ -4,16 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/variadics.cpp \
-../src/variadics_tsk.cpp 
+../src/bit_array.cpp 
 
 CPP_DEPS += \
-./src/variadics.d \
-./src/variadics_tsk.d 
+./src/bit_array.d 
 
 OBJS += \
-./src/variadics.o \
-./src/variadics_tsk.o 
+./src/bit_array.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -28,7 +25,7 @@ src/%.o: ../src/%.cpp src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/variadics.d ./src/variadics.o ./src/variadics_tsk.d ./src/variadics_tsk.o
+	-$(RM) ./src/bit_array.d ./src/bit_array.o
 
 .PHONY: clean-src
 
